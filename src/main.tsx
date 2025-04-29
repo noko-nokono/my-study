@@ -4,7 +4,7 @@ import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router'
 import App from './App'
 import { Layout } from '@/components/Layout'
-import { About } from '@/page/about'
+import { Version19 } from '@/page/version19'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<App />} />
-          <Route path='about' element={<About />} />
+          <Route path='version19' element={<Version19 />} />
         </Route>
       </Routes>
     </BrowserRouter>  
