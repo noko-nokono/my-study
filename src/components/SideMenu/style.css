@@ -1,5 +1,13 @@
 .side_menu {
   width: 280px;
-  height: calc(100vh - 60px);
+  /* 1pxはヘッダーのborder-bottom */
+  height: calc(100vh - 60px - 1px);
   border-right: 1px solid oklch(92.8% 0.006 264.531);
+}
+
+.menu_list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 16px 0;
 }
