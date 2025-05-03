@@ -1,4 +1,5 @@
 import './style.css';
+import { Action } from './component/action';
 
 export const Version19 = () => {
   return (
@@ -14,8 +15,8 @@ export const Version19 = () => {
       </div>
 
       <div>
-        <h2>hogehoge</h2>
-        <p>ああああ</p>
+        <h2>Actions</h2>
+        <Action />
       </div>
 
       <div>
