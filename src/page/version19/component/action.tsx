@@ -1,21 +1,23 @@
 import { useState, useTransition } from "react";
 
-// ditto
 export const Action = () => {
   const [name, setName] = useState("");
   const [error, setError] = useState(null);
   const [isPending, startTransition] = useTransition();
 
-  const updateName = async (name: string) => {
+  const updateName = async (name: string): Promise<{ id: string; name: string }> => {
+    // 検証のため1秒間意図的に遅延させる
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     const option = {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ mock: { name } }),
-   };
+    };
 
-    const response = await fetch(`https://api.getpostman.com/mocks/`, option);
+    const response = await fetch(`https://noko_nokono.com/`, option);
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
@@ -24,12 +26,11 @@ export const Action = () => {
 
   const handleSubmit = () => {
     startTransition(async () => {
-      const error = await updateName(name);
-      if (error) {
+      const res = await updateName(name);
+      if (!res.id) {
         setError(error);
         return;
       } 
-      // redirect("/path");
     })
   };
 
