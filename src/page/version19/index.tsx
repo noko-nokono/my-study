@@ -1,14 +1,6 @@
 import './style.css';
 import { Action } from './component/action';
 
-const useTransitionDescription = `
-  [説明]
-  useTransitionを使用することで非同期な更新処理に対してのpendingの状態を今までより簡単に管理できるようになる。
-  [疑問]
-  1. なぜ公式ドキュメントでは更新という所だけで記載されているのかはわからない。
-  2. 非同期遷移という用語が使われているが、遷移がどのように意味を成すのかわからない。
-`
-
 export const Version19 = () => {
   return (
     <div className='version19_root'>
@@ -25,8 +17,8 @@ export const Version19 = () => {
       <div>
         <h2>Actions</h2>
         <Action />
-        <p>めも</p>
-        <p>{ useTransitionDescription }</p>
+        <p>挙動</p>
+        <p>useTransitionを使用することで非同期な更新処理に対してのpendingの状態を今までより簡単に管理できるようになる。</p>
       </div>
 
       <div>
