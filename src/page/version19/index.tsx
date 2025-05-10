@@ -1,5 +1,6 @@
 import './style.css';
 import { Transition } from './component/useTransition';
+import { ActionState } from './component/useActionState';
 
 export const Version19 = () => {
   return (
@@ -15,15 +16,18 @@ export const Version19 = () => {
       </div>
 
       <div>
-        <h2>Actions</h2>
+        <p>useTransition</p>
         <Transition />
-        <p>挙動</p>
-        <p>useTransitionを使用することで非同期な更新処理に対してのpendingの状態を今までより簡単に管理できるようになる。</p>
+        <p>メモ</p>
+        <p>useTransitionを使用することで、非同期な更新処理に対してのpendingの状態を今までより簡単に管理できるようになる。</p>
       </div>
 
       <div>
-        <h2>fugafuga</h2>
-        <p>いいいい</p>
+        <p>useActionState</p>
+        <ActionState />
+        <p>メモ</p>
+        <p>useActionStateを使用することで、フォームの値の管理を簡略化してくれる。</p>
+        <p>useTransitionを包括する形で説明されていたので、基本はこちらを使うことになりそう？</p>
       </div>
     </div>
   )
