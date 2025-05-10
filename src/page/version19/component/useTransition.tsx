@@ -1,6 +1,6 @@
 import { useState, useTransition } from "react";
 
-export const Action = () => {
+export const Transition = () => {
   const [name, setName] = useState("");
   const [error, setError] = useState(null);
   const [isPending, startTransition] = useTransition();

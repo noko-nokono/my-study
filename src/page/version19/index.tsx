@@ -1,5 +1,5 @@
 import './style.css';
-import { Action } from './component/action';
+import { Transition } from './component/useTransition';
 
 export const Version19 = () => {
   return (
@@ -16,7 +16,7 @@ export const Version19 = () => {
 
       <div>
         <h2>Actions</h2>
-        <Action />
+        <Transition />
         <p>挙動</p>
         <p>useTransitionを使用することで非同期な更新処理に対してのpendingの状態を今までより簡単に管理できるようになる。</p>
       </div>
