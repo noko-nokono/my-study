@@ -19,23 +19,29 @@ export const Version19 = () => {
       <div>
         <p>useTransition</p>
         <Transition />
-        <p>メモ</p>
+        <p>[メモ]</p>
         <p>useTransitionを使用することで、非同期な更新処理に対してのpendingの状態を今までより簡単に管理できるようになる。</p>
+        <p>[document]</p>
+        <a href='https://ja.react.dev/reference/react/useTransition' target='_blank'>https://ja.react.dev/reference/react/useTransition</a>
       </div>
 
       <div>
         <p>useActionState</p>
         <ActionState />
-        <p>メモ</p>
+        <p>[メモ]</p>
         <p>useActionStateを使用することで、フォームの値の管理を簡略化してくれる。</p>
         <p>useTransitionを包括する形で説明されていたので、基本はこちらを使うことになりそう？</p>
+        <p>[document]</p>
+        <a href='https://ja.react.dev/reference/react/useActionState' target='_blank'>https://ja.react.dev/reference/react/useActionState</a>
       </div>
 
       <div>
         <p>useFormStatus</p>
         <FormStatus />
-        <p>メモ</p>
+        <p>[メモ]</p>
         <p>子要素にpropsとしてフォームのデータを渡すのではなく、カスタムフックといて機能を提供してくれている</p>
+        <p>[document]</p>
+        <a href='https://ja.react.dev/reference/react-dom/hooks/useFormStatus' target='_blank'>https://ja.react.dev/reference/react-dom/hooks/useFormStatus</a>
       </div>
     </div>
   )
