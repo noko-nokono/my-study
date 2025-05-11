@@ -1,6 +1,7 @@
 import './style.css';
 import { Transition } from './component/useTransition';
 import { ActionState } from './component/useActionState';
+import { FormStatus } from './component/useFormStatus';
 
 export const Version19 = () => {
   return (
@@ -28,6 +29,13 @@ export const Version19 = () => {
         <p>メモ</p>
         <p>useActionStateを使用することで、フォームの値の管理を簡略化してくれる。</p>
         <p>useTransitionを包括する形で説明されていたので、基本はこちらを使うことになりそう？</p>
+      </div>
+
+      <div>
+        <p>useFormStatus</p>
+        <FormStatus />
+        <p>メモ</p>
+        <p>子要素にpropsとしてフォームのデータを渡すのではなく、カスタムフックといて機能を提供してくれている</p>
       </div>
     </div>
   )
