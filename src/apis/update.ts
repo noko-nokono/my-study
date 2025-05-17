@@ -1,6 +1,6 @@
 type FormState = { id: string; name: string };
 
-export const updateName = async (name: FormState | null): Promise<FormState> => {
+export const updateName = async (data: FormState | null): Promise<FormState> => {
   // 検証のため1秒間意図的に遅延させる
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
@@ -9,7 +9,7 @@ export const updateName = async (name: FormState | null): Promise<FormState> => 
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ mock: { name } }),
+    body: JSON.stringify({ ...data } ),
   };
 
   const response = await fetch(`https://noko_nokono.com/`, option);

@@ -1,10 +1,17 @@
-import { http, HttpResponse } from 'msw';
+import { http, HttpResponse, PathParams } from 'msw';
+
+type Request = {
+  name: string | null;
+}
  
 export const handlers = [
-  http.put('https://noko_nokono.com/', () => {
+  http.put<PathParams, Request>('https://noko_nokono.com/', async ({ request }) => {
+    const data = await request.json();
+    const name = data.name;
+
     return HttpResponse.json({
       id: 'uid',
-      name: 'noko_nokono',
+      name: name,
     })
   }),
 ];
