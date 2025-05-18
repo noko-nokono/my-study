@@ -1,4 +1,4 @@
-type FormState = { id: string; name: string };
+export type FormState = { id: string; name: string };
 
 export const updateName = async (data: FormState | null): Promise<FormState> => {
   // 検証のため1秒間意図的に遅延させる

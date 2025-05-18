@@ -2,6 +2,7 @@ import './style.css';
 import { Transition } from './component/useTransition';
 import { ActionState } from './component/useActionState';
 import { FormStatus } from './component/useFormStatus';
+import { Optimistic } from './component/useOptimistic';
 
 export const Version19 = () => {
   return (
@@ -39,9 +40,18 @@ export const Version19 = () => {
         <p>useFormStatus</p>
         <FormStatus />
         <p>[メモ]</p>
-        <p>子要素にpropsとしてフォームのデータを渡すのではなく、カスタムフックといて機能を提供してくれている</p>
+        <p>子要素にpropsとしてフォームのデータを渡すのではなく、カスタムフックといて機能を提供してくれている。</p>
         <p>[document]</p>
         <a href='https://ja.react.dev/reference/react-dom/hooks/useFormStatus' target='_blank'>https://ja.react.dev/reference/react-dom/hooks/useFormStatus</a>
+      </div>
+
+      <div>
+        <p>useOptimistic</p>
+        <Optimistic />
+        <p>[メモ]</p>
+        <p>非同期の更新を行う際に楽観的な評価を行い、APIのレスポンスの前に入力された値を表示する。</p>
+        <p>[document]</p>
+        <a href='https://ja.react.dev/reference/react/useOptimistic' target='_blank'>https://ja.react.dev/reference/react/useOptimistic</a>
       </div>
     </div>
   )
