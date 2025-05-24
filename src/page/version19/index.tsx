@@ -3,6 +3,7 @@ import { Transition } from './component/useTransition';
 import { ActionState } from './component/useActionState';
 import { FormStatus } from './component/useFormStatus';
 import { Optimistic } from './component/useOptimistic';
+import { UseParent } from './component/useParent';
 
 export const Version19 = () => {
   return (
@@ -52,6 +53,15 @@ export const Version19 = () => {
         <p>非同期の更新を行う際に楽観的な評価を行い、APIのレスポンスの前に入力された値を表示する。</p>
         <p>[document]</p>
         <a href='https://ja.react.dev/reference/react/useOptimistic' target='_blank'>https://ja.react.dev/reference/react/useOptimistic</a>
+      </div>
+
+      <div>
+        <p>use</p>
+        <UseParent />
+        <p>[メモ]</p>
+        <p>非同期のデータ取得を行なってくれる（fetch関数の代わりみたいなイメージ）。Suspenseを使用することで、データ取得中はローディング画面を表示することができる。</p>
+        <p>[document]</p>
+        <a href='https://ja.react.dev/reference/react/use' target='_blank'>https://ja.react.dev/reference/react/use</a>
       </div>
     </div>
   )
