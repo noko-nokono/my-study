@@ -11,6 +11,16 @@ export const handlers = [
     })
   }),
 
+  http.post<PathParams, Request>('https://noko_nokono.com/', async ({ request }) => {
+    const data = await request.json();
+    const name = data.name;
+
+    return HttpResponse.json({
+      id: 'uid',
+      name: name,
+    })
+  }),
+
   http.put<PathParams, Request>('https://noko_nokono.com/', async ({ request }) => {
     const data = await request.json();
     const name = data.name;
