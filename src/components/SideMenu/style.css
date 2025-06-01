@@ -1,7 +1,7 @@
 .side_menu {
   width: 280px;
   /* 1pxはヘッダーのborder-bottom */
-  height: calc(100vh - 60px - 1px);
+  min-height: calc(100vh - 60px - 1px);
   border-right: 1px solid oklch(92.8% 0.006 264.531);
 }
 
