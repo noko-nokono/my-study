@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import App from './App'
 import { Mock } from '@/components/Mock'
 import { Layout } from '@/components/Layout'
+import { ReactUpdate } from '@/page/react-update'
 import { Version19 } from '@/page/version19'
 import { ServerComponent } from '@/page/server-component'
 
@@ -15,8 +16,10 @@ createRoot(document.getElementById('root')!).render(
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<App />} />
-            <Route path='version19' element={<Version19 />} />
-            <Route path='server-component' element={<ServerComponent />} />
+            
+            <Route path='react-update' element={<ReactUpdate />} />
+            <Route path='react-update/version-19' element={<Version19 />} />
+            <Route path='react-update/server-component' element={<ServerComponent />} />
           </Route>
         </Routes>
       </Mock>
