@@ -3,8 +3,7 @@ import './style.css';
 export const SideMenu = () => {
   const menuItems = [
     { name: 'Home', path: '/' },
-    { name: 'version19', path: '/version19' },
-    { name: 'server-component', path: '/server-component' },
+    { name: 'React Update', path: '/react-update' },
   ];
 
   return (
