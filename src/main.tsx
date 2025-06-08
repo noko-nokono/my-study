@@ -8,6 +8,7 @@ import { Layout } from '@/components/Layout'
 import { ReactUpdate } from '@/page/react-update'
 import { Version19 } from '@/page/react-update/version19'
 import { ServerComponent } from '@/page/react-update/server-component'
+import { Blog } from '@/page/blog'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -17,9 +18,13 @@ createRoot(document.getElementById('root')!).render(
           <Route path='/' element={<Layout />}>
             <Route index element={<App />} />
             
+            {/* React Update */}
             <Route path='react-update' element={<ReactUpdate />} />
             <Route path='react-update/version-19' element={<Version19 />} />
             <Route path='react-update/server-component' element={<ServerComponent />} />
+
+            {/* Blog */}
+            <Route path='blog' element={<Blog />} />
           </Route>
         </Routes>
       </Mock>
