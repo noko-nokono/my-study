@@ -1,4 +1,5 @@
 import './style.css';
+import { List } from '@/components/List';
 
 const update = [
   { name: 'version-19', path: '/react-update/version-19' },
@@ -8,11 +9,7 @@ const update = [
 export const ReactUpdate = () => {
   return (
     <ul className='react_update_root'>
-      {update.map((item) => (
-        <li>
-          <a href={ item.path }>{ item.name }</a>
-        </li>
-      ))}
+      <List list={update} />
     </ul>
   )
 };
