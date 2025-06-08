@@ -6,8 +6,8 @@ import App from './App'
 import { Mock } from '@/components/Mock'
 import { Layout } from '@/components/Layout'
 import { ReactUpdate } from '@/page/react-update'
-import { Version19 } from '@/page/version19'
-import { ServerComponent } from '@/page/server-component'
+import { Version19 } from '@/page/react-update/version19'
+import { ServerComponent } from '@/page/react-update/server-component'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
