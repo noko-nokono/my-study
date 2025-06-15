@@ -1,5 +1,5 @@
 import './style.css';
-import { List } from '@/components/List';
+import { List } from '@/components/common/List';
 
 const update = [
   { name: 'version-19', path: '/react-update/version-19' },

@@ -1,5 +1,5 @@
 import './style.css';
-import { List } from '@/components/List';
+import { List } from '@/components/common/List';
 
 export const SideMenu = () => {
   const menuItems = [

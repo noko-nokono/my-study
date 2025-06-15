@@ -10,7 +10,7 @@ export const Mock = (props: Props) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   const initMocks = async () => {
-    const { worker } = await import('../../mock');
+    const { worker } = await import('../../../mock');
     return worker.start();
   };
   
