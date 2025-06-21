@@ -1,4 +1,3 @@
-import './style.css';
 import { Transition } from './component/useTransition';
 import { ActionState } from './component/useActionState';
 import { FormStatus } from './component/useFormStatus';
@@ -7,8 +6,8 @@ import { UseParent } from './component/useParent';
 
 export const Version19 = () => {
   return (
-    <div className='version19_root'>
-      <div className='version19_container'>
+    <div className='flex flex-col gap-8 h-full'>
+      <div className='flex flex-col gap-2'>
         <h1>React 19</h1>
         <a
           href="https://react.dev/blog/2024/12/05/react-19"

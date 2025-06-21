@@ -1,4 +1,3 @@
-import './style.css';
 import { List } from '@/components/common/List';
 
 const update = [
@@ -8,7 +7,7 @@ const update = [
 
 export const ReactUpdate = () => {
   return (
-    <ul className='react_update_root'>
+    <ul className='flex flex-col gap-2'>
       <List list={update} />
     </ul>
   )

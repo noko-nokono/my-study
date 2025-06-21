@@ -1,4 +1,3 @@
-import './style.css';
 import { List } from '@/components/common/List';
 
 export const SideMenu = () => {
@@ -9,8 +8,8 @@ export const SideMenu = () => {
   ];
 
   return (
-    <aside className="side_menu">
-      <ul className='menu_list'>
+    <aside className="min-w-70 min-h-[calc(100vh-60px-1px)] border-r border-gray-200">
+      <ul className='flex flex-col gap-2 px-4 pt-4'>
         <List list={menuItems} />
       </ul>
     </aside>
