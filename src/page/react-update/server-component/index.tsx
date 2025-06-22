@@ -1,12 +1,12 @@
-import { TypographyBlockquote } from '@/components/ui/blockquote';
+import { Blockquote } from '@/components/ui/blockquote';
 
 export const ServerComponent = () => {
   return (
     <div className='flex flex-col gap-4'>
       <h2 className='text-xl'>ServerComponent</h2>
-      <TypographyBlockquote>
+      <Blockquote>
         This means libraries that ship with Server Components can now target React 19 as a peer dependency with a react-server export condition for use in frameworks that support the Full-stack React Architecture.  
-      </TypographyBlockquote>
+      </Blockquote>
       <p>
         React version 19 で追加されたサーバーコンポーネントは、フレームワークで使用されることを前提として機能の追加になっている。
         <br />
