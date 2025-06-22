@@ -1,4 +1,4 @@
-import { H1, H2, H3 } from '@/components/ui';
+import { H1, H2, H3, Blockquote } from '@/components/ui';
 
 type Props = {
   page: string;
@@ -29,6 +29,15 @@ const Markdown = ({ page }: Props) => {
       if (trimmedLine.startsWith('#')) {
         const content = trimmedLine.substring(1).trim();
         return <H1 key={index}>{content}</H1>;
+      }
+
+      if (trimmedLine.startsWith('>')) {
+        const content = trimmedLine.substring(1).trim();
+        return <Blockquote key={index}>{content}</Blockquote>;
+      }
+
+      if (trimmedLine.startsWith('https:')) {
+        return <a href={trimmedLine} target='_blank' key={index}>{trimmedLine}</a>;
       }
       
       // 空行の場合は改行
