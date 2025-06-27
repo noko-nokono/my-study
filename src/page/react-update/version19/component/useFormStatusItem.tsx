@@ -1,10 +1,11 @@
 import { useFormStatus } from "react-dom";
+import { Button } from '@/components/ui';
 
 export const FormStatusItem = () => {
   const {pending, data} = useFormStatus();
   console.log(data);
 
   return (
-    <button type="submit" disabled={pending}>Update</button>
+    <Button type="submit" disabled={pending}>Update</Button>
   )
 };

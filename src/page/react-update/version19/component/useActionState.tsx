@@ -1,5 +1,6 @@
 import { useState, useActionState } from 'react';
 import { updateName } from '@/apis/update';
+import { Input, Button } from '@/components/ui';
 
 export const ActionState = () => {
   const [name, setName] = useState("");
@@ -9,9 +10,9 @@ export const ActionState = () => {
   );
 
   return (
-    <form action={submitAction}>
-      <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
-      <button type="submit" disabled={isPending}>Update</button>
+    <form action={submitAction}>      
+      <Input type="text" name="name" className="w-80" value={name} onChange={(e) => setName(e.target.value)} />
+      <Button type="submit" disabled={isPending}>Update</Button>
       {state && <p>{ state.name }</p>}
     </form>
   )

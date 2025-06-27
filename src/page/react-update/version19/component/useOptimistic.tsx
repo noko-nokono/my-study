@@ -1,6 +1,7 @@
 import { useState, useOptimistic, startTransition } from 'react';
 import { addName } from '@/apis/post';
 import type { FormState } from '@/apis/update';
+import { Input, Button } from '@/components/ui';
 
 export const Optimistic = () => {
   const [name, setName] = useState("");
@@ -19,8 +20,8 @@ export const Optimistic = () => {
 
   return (
     <form action={handleSubmit}>
-      <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-      <button type="submit">Update</button>
+      <Input type="text" className="w-80" value={name} onChange={(e) => setName(e.target.value)} />
+      <Button type="submit">Update</Button>
       { optimistic.map((item) => (
         <p>{ item.name } { item.isPending ? "Pending" : "Done" }</p>
       ))}
