@@ -12,8 +12,10 @@ export const FormStatus = () => {
 
   return (
     <form action={submitAction}>
-      <Input type="text" name="name" className="w-80" value={name} onChange={(e) => setName(e.target.value)} />
-      <FormStatusItem />
+      <div className="flex gap-2">
+        <Input type="text" name="name" className="w-80" value={name} onChange={(e) => setName(e.target.value)} />
+        <FormStatusItem />
+      </div>
       {state && <p>{ state.name }</p>}
     </form>
   )

@@ -18,7 +18,7 @@ export const Transition = () => {
   };
 
   return (
-    <div>
+    <div className="flex gap-2">
       <Input value={name} className="w-80" onChange={(event) => setName(event.target.value)} />
       <Button onClick={handleSubmit} disabled={isPending}>
         Update

@@ -20,8 +20,10 @@ export const Optimistic = () => {
 
   return (
     <form action={handleSubmit}>
-      <Input type="text" className="w-80" value={name} onChange={(e) => setName(e.target.value)} />
-      <Button type="submit">Update</Button>
+      <div className="flex gap-2">
+        <Input type="text" className="w-80" value={name} onChange={(e) => setName(e.target.value)} />
+        <Button type="submit">Update</Button>
+      </div>
       { optimistic.map((item) => (
         <p>{ item.name } { item.isPending ? "Pending" : "Done" }</p>
       ))}

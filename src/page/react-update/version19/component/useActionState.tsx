@@ -10,9 +10,11 @@ export const ActionState = () => {
   );
 
   return (
-    <form action={submitAction}>      
-      <Input type="text" name="name" className="w-80" value={name} onChange={(e) => setName(e.target.value)} />
-      <Button type="submit" disabled={isPending}>Update</Button>
+    <form action={submitAction}>
+      <div className="flex gap-2">
+        <Input type="text" name="name" className="w-80" value={name} onChange={(e) => setName(e.target.value)} />
+        <Button type="submit" disabled={isPending}>Update</Button>
+      </div>      
       {state && <p>{ state.name }</p>}
     </form>
   )
