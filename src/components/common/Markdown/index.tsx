@@ -1,4 +1,5 @@
 import { H1, H2, H3, Blockquote } from '@/components/ui';
+import { LinkCard } from '@/components/common/LinkCard';
 
 type Props = {
   page: string;
@@ -37,7 +38,7 @@ const Markdown = ({ page }: Props) => {
       }
 
       if (trimmedLine.startsWith('https:')) {
-        return <a href={trimmedLine} target='_blank' key={index}>{trimmedLine}</a>;
+        return <LinkCard key={index} url={trimmedLine} className='mt-2.5' />;
       }
       
       // 空行の場合は改行
