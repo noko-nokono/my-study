@@ -13,7 +13,7 @@ export const List = (props: Props) => {
   return (
     <>
       { list.map((item) => (
-        <li>
+        <li key={item.name}>
           <a href={ item.path }>{ item.name }</a>
         </li>
       ))}

@@ -25,7 +25,7 @@ export const Optimistic = () => {
         <Button type="submit">Update</Button>
       </div>
       { optimistic.map((item) => (
-        <p>{ item.name } { item.isPending ? "Pending" : "Done" }</p>
+        <p key={item.id}>{ item.name } { item.isPending ? "Pending" : "Done" }</p>
       ))}
     </form>
   );
