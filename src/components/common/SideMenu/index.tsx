@@ -8,8 +8,8 @@ export const SideMenu = () => {
   ];
 
   return (
-    <aside className="min-w-70 min-h-[calc(100vh-60px-1px)] border-r border-gray-200">
-      <ul className='flex flex-col gap-2 px-4 pt-4'>
+    <aside className="min-w-60 min-h-[calc(100vh-200px-1px)] border border-gray-200 rounded-[50px]">
+      <ul className='flex flex-col gap-2 px-4 pt-8'>
         <List list={menuItems} />
       </ul>
     </aside>

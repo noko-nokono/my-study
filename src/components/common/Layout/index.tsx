@@ -7,7 +7,7 @@ export const Layout = () => {
   return (
     <>
       <Header />
-      <div className='flex'>
+      <div className='w-[1000px] flex mx-auto mt-4'>
         <SideMenu />
         <Container>
           <Outlet />
