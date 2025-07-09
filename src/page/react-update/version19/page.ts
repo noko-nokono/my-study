@@ -2,7 +2,8 @@
 export const page =
 `# React 19
 
-公式ドキュメント: https://react.dev/blog/2024/12/05/react-19`;
+公式ドキュメント
+https://react.dev/blog/2024/12/05/react-19`
 
 export const useTransitionPage =
 `### useTransition
