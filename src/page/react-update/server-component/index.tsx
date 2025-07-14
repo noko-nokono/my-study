@@ -1,4 +1,3 @@
-// import { Blockquote, H3 } from '@/components/ui';
 import Markdown from '@/components/common/Markdown';
 import { page } from './page';
 
