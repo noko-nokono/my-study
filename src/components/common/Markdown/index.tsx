@@ -1,4 +1,4 @@
-import { H1, H2, H3, Blockquote } from '@/components/ui';
+import { H1, H2, H3, Blockquote, Separator } from '@/components/ui';
 import { LinkCard } from '@/components/common/LinkCard';
 
 type Props = {
@@ -39,6 +39,11 @@ const Markdown = ({ page }: Props) => {
 
       if (trimmedLine.startsWith('https:')) {
         return <LinkCard key={index} url={trimmedLine} className='mt-2.5' />;
+      }
+
+      // セパレーター (---)
+      if (trimmedLine === '---') {
+        return <Separator key={index} className='my-4' />;
       }
       
       // 空行の場合は改行
